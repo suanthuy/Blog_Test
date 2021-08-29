@@ -22,6 +22,7 @@ app.use(morgan("combined"));
 /* Template engine */
 /* Template engines help to write the code html at another place and shorter */
 /* app.engine: using template engine is handlebars */
+/* Handlebar help to write code HTML easier */
 app.engine(".hbs", handlebars({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
 app.set("views", path.join(__dirname, "resources", "views"));
