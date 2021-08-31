@@ -10,4 +10,5 @@ const Course = new Schema({
     updateAt: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model("Course", Course);
+/** Mongoose.model will access to --> courses model */
+module.exports = mongoose.model("Courses", Course);
