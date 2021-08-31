@@ -8,6 +8,11 @@ const route = require("./routes");
 const app = express();
 const port = 3000;
 
+const db = require("./Database");
+
+/* Connect to mongoDB */
+db.connect();
+
 /* Express static */
 /* Show static file */
 app.use(express.static(path.join(__dirname, "public")));
@@ -33,5 +38,5 @@ route(app);
 /* Layout is a standard structure of website */
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`App listening at http://localhost:${port}`);
 });
