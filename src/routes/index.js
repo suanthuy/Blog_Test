@@ -1,6 +1,7 @@
 const newsRouter = require("./news.routers");
 const homeRouter = require("./home.routers");
 const searchRouter = require("./search.routers");
+const coursesRouter = require("./courses.routers");
 
 function route(app) {
     /************************************** */
@@ -23,6 +24,7 @@ function route(app) {
     /************************************** */
 
     app.use("/search", searchRouter);
+    app.use("/course", coursesRouter);
     app.use("/news", newsRouter);
     app.use("/", homeRouter);
 }
