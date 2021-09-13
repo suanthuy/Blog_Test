@@ -3,6 +3,7 @@ const homeRouter = require("./home.routers");
 const searchRouter = require("./search.routers");
 const coursesRouter = require("./courses.routers");
 const loginRouter = require("./login.routers");
+const meRouter = require("./me.routers");
 
 function route(app) {
     /************************************** */
@@ -25,6 +26,7 @@ function route(app) {
     /************************************** */
 
     app.use("/search", searchRouter);
+    app.use("/me", meRouter);
     app.use("/courses", coursesRouter);
     app.use("/login", loginRouter);
     app.use("/news", newsRouter);
